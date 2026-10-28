@@ -1,6 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Typing Trail</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fredoka:wght@500;600;700&family=Lexend:wght@400;500;600&display=swap">
+<style>
+:root{color-scheme:light}
+html,body{margin:0}
+[hidden]{display:none!important}
+img{max-width:100%}
+</style>
 <style>
 /* Layout: one calm column. Home = hero + four "worlds" of level cards. Lesson = prompt card over a finger-colored keyboard and hands. */
 :root{
@@ -210,6 +221,9 @@ body.no-hands #hands{display:none} body.no-kb #kb{display:none}
 .sw[aria-checked="true"]::after{transform:translateX(20px);background:var(--surface)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
+</head>
+<body>
+
 <div class="wrap">
   <header class="top">
     <div class="brand"><span id="brandKip" style="display:block;width:38px"></span>Typing Trail</div>
@@ -775,3 +789,6 @@ $('#brandKip').innerHTML=KIP;$('#coachKip').innerHTML=KIP;
 buildKeyboard();buildHands();applySettings();renderHome();show('home');
 })();
 </script>
+
+</body>
+</html>
